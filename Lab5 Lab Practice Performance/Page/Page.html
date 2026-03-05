@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="eng">
+  <title>Contact Us Form</title>
+
+  <body>
+    <link rel="stylesheet" href="../Design/Style.css" />
+
+    <head>
+      <h1>Contact Us Form</h1>
+    </head>
+
+    <form>
+      <table>
+        <tr>
+          <td>
+            <label for="firstname"> FIRST NAME </label> <br />
+            <input type="text" id="firstname" name="firstname" />
+            <span class="errmsg" id="err_firstname">
+              Field Value need to be filled up
+            </span>
+          </td>
+          <td>
+            <label for="lastname"> LAST NAME </label> <br />
+            <input type="text" id="lastname" name="lastname" />
+            <span class="errmsg" id="err_lastname">
+              Field Value need to be filled up
+            </span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="email"> EMAIL </label> <br />
+            <input type="text" id="email" name="email" />
+            <span class="errmsg" id="err_email">
+              Field Value need to be filled up
+            </span>
+          </td>
+          <td>
+            <label for="phone"> PHONE NUMBER </label> <br />
+            <input type="text" id="phone" name="phone" />
+            <span class="errmsg" id="err_phone">
+              Field Value need to be filled up
+            </span>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <label for="message"> WHAT DO YOU HAVE IN MIND </label> <br />
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              cols="45"
+              placeholder="Please enter query..."
+            ></textarea>
+            <span class="errmsg" id="err_message">
+              Field Value need to be filled up
+            </span>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <button id="submitbtn" onclick="return collect_data();">
+              Submit
+            </button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
