@@ -15,7 +15,6 @@ body {
   width: 450px;
 }
 
-/* --- "No Fieldset" Border Trick --- */
 .header-row {
   display: flex;
   height: 24px;
@@ -57,7 +56,6 @@ body {
   padding: 10px 20px 25px 20px;
 }
 
-/* --- Input Elements Styling --- */
 label {
   display: block;
   font-size: 14px;
