@@ -1,4 +1,4 @@
-console.log("Connected");
+console.log("Connected!");
 
 function calculate_total() {
   let unit_price = 1000;
