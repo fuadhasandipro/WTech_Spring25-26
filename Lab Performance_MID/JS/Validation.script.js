@@ -1,7 +1,5 @@
 console.log("Connected");
 
-let couponAlerted = false;
-
 function calculate_total() {
   let unit_price = 1000;
   let days = 30;
@@ -13,7 +11,6 @@ function calculate_total() {
 
   if (quantity == "") {
     total_input.value = 0;
-    couponAlerted = false;
     return false;
   }
 
@@ -27,12 +24,7 @@ function calculate_total() {
   total_input.value = total_price;
 
   if (total_price > 1000) {
-    if (couponAlerted == false) {
-      alert("Congratulations! You are eligible for a gift coupon.");
-      couponAlerted = true;
-    }
-  } else {
-    couponAlerted = false;
+    alert("Congratulations! You are eligible for a gift coupon.");
   }
 }
 
