@@ -20,3 +20,31 @@ label {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   color: burlywood;
 }
+
+#InputText,
+#analyzedata {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+  border: 20px solid gray;
+  border-radius: 20px;
+  background-color: bisque;
+  margin: 0px;
+  padding: 10px;
+}
+
+* {
+  text-align: left;
+  color: blue;
+}
+textarea {
+  max-width: 500px;
+  min-width: 200px;
+  resize: horizontal;
+}
+p {
+  margin: 8px 0;
+  color: blue;
+}
+span {
+  color: blue;
+}
