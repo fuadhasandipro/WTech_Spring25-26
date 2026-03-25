@@ -1,0 +1,22 @@
+body {
+  background-color: aquamarine;
+}
+h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 60px;
+  color: blue;
+  font-style: italic;
+  text-align: center;
+}
+form {
+  width: 700px;
+  margin: 30px;
+  padding: 50px;
+  background-color: white;
+}
+
+label {
+  font-size: 25px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: burlywood;
+}
