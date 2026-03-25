@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="eng">
+  <title>Text Analyzer</title>
+
+  <body>
+    <link
+      rel="stylesheet"
+      href="E:\Dipro\Downloads\WTech_Spring25-26\Lab Task 05 - Text Analyzer\Design\style.css"
+    />
+    <head>
+      <script src="E:\Dipro\Downloads\WTech_Spring25-26\Lab Task 05 - Text Analyzer\JS\script.js"></script>
+      <h1>Text Analyzer Form</h1>
+    </head>
+
+    <form>
+      <label for="InputText">Enter Text: </label>
+      <textarea
+        id="InputText"
+        name="InputText"
+        rows="6"
+        cols="40"
+        placeholder="Enter The Text"
+        onkeyup="return get_textarea();"
+      ></textarea>
+
+      <br /><br />
+
+      <div class="Header">
+        <p>Total Characters: <span id="charCount">0</span></p>
+        <p>Total Words: <span id="wordCount">0</span></p>
+        <p>Reversed Text: <span id="reversedText"></span></p>
+      </div>
+
+      <br /><br />
+
+      <button id="analyzedata" onclick="return analyze_data();">
+        Analyze Text
+      </button>
+    </form>
+  </body>
+</html>
