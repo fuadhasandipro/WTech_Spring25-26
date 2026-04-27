@@ -1,8 +1,4 @@
 <?php
-/*
- * Developed by: Fuad Hasan
- * Email: fuad@zyntro360.com
- */
 
 require_once "../Model/db.php";
 session_start();
@@ -14,7 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userEmail = trim($_POST["email"]);
     $userPass = $_POST["password"];
 
-    // Validation logic refactored
     $isValid = true;
     
     if (empty($userName) || strlen($userName) < 4) {
@@ -39,7 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         setcookie("user_name", $userName, time() + 3600, "/");
         setcookie("user_email", $userEmail, time() + 3600, "/");
 
-        // JSON handling
         $newUser = [
             "name" => $userName,
             "email" => $userEmail,
@@ -55,7 +49,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $currentData[] = $newUser;
         file_put_contents($fileName, json_encode($currentData, JSON_PRETTY_PRINT));
 
-        // Database logic
         $db = new DatabaseManager();
         $conn = $db->openConnection();
         $isRegistered = $db->registerUser($conn, "users", $userName, $userEmail, $userPass);

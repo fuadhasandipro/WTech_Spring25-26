@@ -1,8 +1,4 @@
 <?php
-/*
- * Developed by: Fuad Hasan
- * Email: fuad@zyntro360.com
- */
 
 require_once "../Model/db.php";
 session_start();
@@ -17,7 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["email"] = $emailInput;
         setcookie("last_login_email", $emailInput, time() + (86400 * 30), "/");
 
-        // Log entry in JSON (simplified and refactored)
         $loginLog = [
             "email" => $emailInput,
             "timestamp" => date("Y-m-d H:i:s")
