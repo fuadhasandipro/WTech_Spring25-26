@@ -1,9 +1,4 @@
 <?php
-/*
- * Developed by: Fuad Hasan
- * Email: fuad@zyntro360.com
- * Lab 3 - Database Connection Task
- */
 
 class DatabaseManager
 {
@@ -14,12 +9,16 @@ class DatabaseManager
 
     public function openConnection()
     {
-        $conn = new mysqli($this->host, $this->user, $this->pass, $this->dbname);
-        
-        if ($conn->connect_error) {
-            die("Database connection failed: " . $conn->connect_error);
+        $db_host = "localhost";
+        $db_user = "root";
+        $db_password = "";
+        $db_name = "practice";
+
+        $connection = new mysqli($db_host, $db_user, $db_password, $db_name);
+        if ($connection->connect_error) {
+            die("Please connection the database" . $connection->connect_error);
         }
-        return $conn;
+        return $connection;
     }
 
     public function registerUser($conn, $table, $name, $email, $password)

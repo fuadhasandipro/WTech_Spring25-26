@@ -25,7 +25,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $logs[] = $loginLog;
         file_put_contents($jsonFile, json_encode($logs, JSON_PRETTY_PRINT));
 
-        // DB Authentication
         $dbManager = new DatabaseManager();
         $dbConn = $dbManager->openConnection();
         $authResult = $dbManager->authenticateUser($dbConn, "users", $emailInput, $passInput);
